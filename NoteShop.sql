@@ -115,8 +115,6 @@ CREATE TABLE IF NOT EXISTS `order` (
 
 INSERT INTO `order` (`id`, `pay_type`, `delivery_type`, `name`, `tel`) VALUES
 (6, '2', '2', 'Костевич Владислав', '+375295565788'),
-(7, '1', '3', 'Ебнутый Жора', '+375293573222'),
-(9, '2', '2', 'Невероятный Жулик', '+372294512324'),
 (10, '1', '3', 'Григорий Мусумбаев', '+372294512324');
 
 -- --------------------------------------------------------
@@ -167,8 +165,7 @@ INSERT INTO `product` (`id`, `price`, `image_source`, `brand`, `model`, `screen_
 (16, 602, 'images/hp_probook.jpg', 'HP', 'ProBook 455 G2 (G6W40EA)', '15.6', '(1366 x 768) TN+Film', 'AMD A6 Pro 7050B (2 200 МГц)', 'amd', 4, 500, 'AMD Radeon R5 M255', 'Windows 8', 'windows-8', 'LAN / Wi-Fi / Bluetooth 4.0 / веб-камера / 2200 г'),
 (17, 605, 'images/lenovo.jpg', 'Lenovo', 'Z50-70 (59421900)', '15.6', '(1366 x 768) TN+Film', 'Intel Pentium 3558U (1 700 МГц)', 'intel-pentium', 4, 1000, 'NVIDIA GeForce 840M', 'DOS', 'dos', 'LAN / Wi-Fi / Bluetooth 4.0 / веб-камера / 2400 г'),
 (18, 662, 'images/lenovo.jpg', 'Lenovo', 'G50-70 (59423447)', '15.6', '(1366 x 768) TN+Film', 'Intel Core i3 4030U (1 900 МГц)', 'intel-i3', 4, 500, 'Intel HD Graphics 4400', 'Windows 8.1', 'windows-8', 'LAN / Wi-Fi / Bluetooth 4.0 / веб-камера / 2500 г'),
-(19, 540, 'images/lenovo.jpg', 'Lenovo', 'G50-70 (59433722)', '15.6', '(1366 x 768) TN+Film', 'Intel Core i3 4005U (1 700 МГц)', 'intel-i3', 4, 500, 'AMD Radeon R5 M230', 'DOS', 'dos', 'LAN / Wi-Fi / Bluetooth 4.0 / веб-камера / 2500 г'),
-(23, 1234, 'images/obama.png', 'Acer', 'qwerty', '11.6', 'qwerty', 'qwerty', 'intel-celeron', 1, 1000, 'qwerty', 'qwerty', 'windows-7', 'qwerty');
+(19, 540, 'images/lenovo.jpg', 'Lenovo', 'G50-70 (59433722)', '15.6', '(1366 x 768) TN+Film', 'Intel Core i3 4005U (1 700 МГц)', 'intel-i3', 4, 500, 'AMD Radeon R5 M230', 'DOS', 'dos', 'LAN / Wi-Fi / Bluetooth 4.0 / веб-камера / 2500 г');
 
 -- --------------------------------------------------------
 
@@ -185,19 +182,6 @@ CREATE TABLE IF NOT EXISTS `product_order` (
   KEY `product_id_2` (`product_id`),
   KEY `order_id` (`order_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
-
---
--- Дамп данных таблицы `product_order`
---
-
-INSERT INTO `product_order` (`id`, `product_id`, `order_id`) VALUES
-(14, 15, 6),
-(15, 15, 7),
-(18, 2, 9),
-(19, 12, 9),
-(20, 13, 9),
-(21, 7, 10),
-(22, 4, 10);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
