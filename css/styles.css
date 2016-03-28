@@ -1,0 +1,1026 @@
+/*=======================================================================*/
+/*---------------------------FONTS---------------------------*/
+/*=======================================================================*/
+
+@font-face {
+    font-family: "NeoSansProRegular";
+    src: url("../fonts/NeoSansProRegular.eot");
+    src: url("../fonts/NeoSansProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/NeoSansProRegular.woff") format("woff"),
+    url("../fonts/NeoSansProRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CuprumRegular";
+    src: url("../fonts/CuprumRegular.eot");
+    src: url("../fonts/CuprumRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CuprumRegular.woff") format("woff"),
+    url("../fonts/CuprumRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CalibriRegular";
+    src: url("../fonts/CalibriRegular.ttf") format("truetype");
+}
+
+/*=======================================================================*/
+/*----------------------BOOTSTRAP CLASSES------------------------*/
+/*=======================================================================*/
+
+.container{
+    padding: 0;
+}
+
+.row{
+    margin: 0;
+}
+
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12,
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1{
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+}
+
+/*=======================================================================*/
+/*----------------------GENERAL STYLES------------------------*/
+/*=======================================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #f7f7f7;
+}
+
+.cleaner{
+    clear: both;
+}
+
+/*=======================================================================*/
+/*----------------------HEADER STYLES------------------------*/
+/*=======================================================================*/
+
+header{
+    background: url("../images/headerBackground.jpg") center;
+    height: 146px;
+}
+
+header #logo_block{
+    padding: 43px 0 0 5px;
+}
+
+header #logo_block h1{
+    color: #f3fae7;
+    font-family: 'NeoSansProRegular';
+    font-size: 40px;
+    font-weight: normal;
+}
+
+header #logo_block h2{
+    color: #f3fae7;
+    font-family: 'NeoSansProRegular';
+    font-size: 13px;
+    font-weight: normal;
+}
+
+header #contacts_block{
+    padding: 43px 5px 0 0;
+}
+
+header #contacts_block h3{
+    color: #f3fae7;
+    float: right;
+    font-family: 'CalibriRegular';
+    font-size: 16px;
+    font-weight: normal;
+}
+
+header #contacts_block h2{
+    clear: both;
+    color: #f3fae7;
+    float: right;
+    font-family: 'CalibriRegular';
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/*=======================================================================*/
+/*----------------------MAIN STYLES------------------------*/
+/*=======================================================================*/
+
+main{
+    position: absolute;
+    top: 120px;
+    width: 100%;
+}
+
+/*=======================================================================*/
+/*----------------------MAIN NAV STYLES------------------------*/
+/*=======================================================================*/
+
+main nav{
+    background: linear-gradient(to top, #83a230 0%, #96b142 49%, #a4bd50 50%, #c3d77b 100%);
+    border-radius: 5px;
+}
+
+main nav #menu_block .menu_item{
+    cursor: pointer;
+    padding: 22px 0;
+    text-decoration: none;
+}
+
+main nav #menu_block .selected{
+    background: rgba(79,95,31,0.2);
+}
+
+main nav #menu_block .menu_item:hover{
+    background: rgba(79,95,31,0.2);
+}
+
+main nav #menu_block .menu_item h4{
+    color: #f3fae7;
+    font-family: CalibriRegular;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    -webkit-user-select: none;
+}
+
+main nav .header_button{
+    background: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+main nav .header_button img{
+    display: block;
+    float: left;
+    height: 14px;
+    margin: 2px 5px 0 0;
+}
+
+main nav .header_button h4{
+    color: #83a03c;
+    font-family: 'CalibriRegular';
+    font-size: 15px;
+    font-weight: normal;
+    float: left;
+    -webkit-user-select: none;
+}
+
+main nav #show_menu_block{
+    padding: 11px 0 11px 10px;
+}
+
+main nav #show_menu_block #show_menu_button{
+    float: left;
+    position: relative;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list{
+    display: none;
+    position: absolute;
+    top: 36px;
+    z-index: 10;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul{
+    list-style: none;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul li{
+    background: #ffffff;
+    border-top: 1px solid #83a03c;
+    padding: 5px 15px;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul li a{
+    color: #83a03c;
+    font-family: 'CalibriRegular';
+    font-size: 15px;
+    text-decoration: none;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul .selected{
+    background: linear-gradient(to top, #83a230 0%, #96b142 49%, #a4bd50 50%, #c3d77b 100%);;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul .selected a{
+    color: #ffffff;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul li:hover{
+    background: linear-gradient(to top, #83a230 0%, #96b142 49%, #a4bd50 50%, #c3d77b 100%);;
+}
+
+main nav #show_menu_block #show_menu_button #menu_list ul li:hover a{
+    color: #ffffff;
+}
+
+main nav #show_menu_block #close_menu_space{
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+main nav #show_basket_block{
+    padding: 11px 10px 11px 0;
+}
+
+main nav #show_basket_block #basket_button_block{
+    float: right;
+}
+
+/*=======================================================================*/
+/*----------------------MAIN CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content{
+    background: #ffffff;
+}
+
+main #content section #search_block{
+    padding: 10px;
+}
+
+main #content section #search_block #search_panel{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main #content section #search_block #search_panel h4{
+    color: #5f702e;
+    cursor: pointer;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+main #content section #search_block #search_panel h4:after{
+    content: "\25BC";
+    font-size: 11px;
+}
+
+main #content section #search_block #search_panel h4:hover{
+    text-decoration: underline;
+}
+
+main #content section #search_block #search_panel .options_block{
+    display: none;
+    padding-bottom: 5px;
+}
+
+main #content section #search_block #search_panel .options_block[data-visible='1']{
+    display: block;
+}
+
+main #content section #search_block #search_panel label{
+    display: block;
+    float: left;
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    padding: 1px 0;
+}
+
+main #content section #search_block #search_panel input{
+    clear: both;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+
+main #content section #search_block #search_panel #price_select_block input{
+    clear: none;
+    width: 45%;
+    margin: 0;
+}
+
+main #content section #search_block #search_panel #filter_button_block input[type='submit']{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    font-size: 13px;
+    float: right;
+    padding: 4px 18px;
+    outline: none;
+}
+
+main #content section #search_block #search_panel #filter_button_block a{
+    color: #6f6f6f;
+    font-size: 13px;
+    float: right;
+    padding: 7px 18px 0 0;
+    text-decoration: underline;
+}
+
+main #content section #catalog_block .catalog_item_block{
+    padding: 0 10px 10px 10px;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item img{
+    height: 97px;
+    margin: 10px 10% 5px 10%;
+    width: 80%;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item h4{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    font-weight: normal;
+    height: 28px;
+    text-align: center;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item p{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    height: 120px;
+    padding: 6px;
+    margin: 0;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item h3{
+    color: #889564;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+    font-weight: normal;
+    margin: 3px 0;
+    text-align: center;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item .add_to_basket, .catalog_item .update_product{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    display: block;
+    font-size: 13px;
+    margin: 5px auto 10px auto;
+    padding: 4px 12px;
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+}
+
+main #content section #catalog_block .catalog_item_block .catalog_item .added{
+    background: #8aa934;
+    color: #ffffff;
+}
+
+main #content section #paging_block{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+main #content section #paging_block #paging_numbers_block{
+    padding: 4px 0 4px 14px;
+}
+
+main #content section #paging_block #paging_numbers_block ul{
+    list-style: none;
+}
+
+main #content section #paging_block #paging_numbers_block ul li a{
+    background: linear-gradient(to top right, #799d2e, #c1d478);
+    border: 1px solid #97b547;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    margin-right: 3px;
+    padding: 4px 8px;
+    text-decoration: none;
+    -webkit-user-select: none;
+}
+
+main #content section #paging_block #paging_numbers_block ul li .selected{
+    text-decoration: underline;
+}
+
+main #content section #paging_block #paging_nextprev_block{
+    padding: 9px 0;
+}
+
+main #content section #paging_block #paging_nextprev_block a{
+    color: #707070;
+    float: right;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    margin-right: 14px;
+    text-decoration: none;
+}
+
+main #content aside .title_block{
+    padding: 16px 0;
+    border-radius: 5px;
+    background: linear-gradient(to top, #83a230 0%, #96b142 49%, #a4bd50 50%, #c3d77b 100%);
+}
+
+main #content aside .title_block h2{
+    color: #ffffff;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+main #content aside #categories_block{
+    margin: 10px 14px 0 0;
+}
+
+main #content aside #categories_block ul{
+    margin-top: 5px;
+    list-style: none;
+}
+
+main #content aside #categories_block ul li{
+    border-bottom: 1px solid #ededed;
+    color: #959595;
+    font-family: 'CalibriRegular';
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+main #content aside #categories_block ul li img{
+    float: left;
+    margin-right: 5px;
+}
+
+main #content aside #discounts_block{
+    margin: 10px 14px 0 0;
+}
+
+main #content aside #discounts_block .comment_block{
+    background: #eeffd8;
+    border-radius: 10px;
+    margin: 5px 4px 0 4px;
+    padding: 7px 9px 10px 9px;
+}
+
+main #content aside #discounts_block .comment_block p{
+    color: #676767;
+    font-family: 'CalibriRegular';
+    font-size: 12px;
+}
+
+main #content aside #discounts_block .comment_block h6{
+    color: #768f38;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+    text-align: right;
+}
+
+/*=======================================================================*/
+/*----------------------MAIN FOOTER STYLES------------------------*/
+/*=======================================================================*/
+
+main footer{
+    background: linear-gradient(to top, #f5f5f5, #ffffff);
+    padding: 38px 0 12px 0;
+}
+
+main footer h6{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 11px;
+    font-weight: normal;
+}
+
+main footer h6 span{
+    color: #83a03c;
+}
+
+main footer ul{
+    list-style: none;
+}
+
+main footer ul li{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 11px;
+}
+
+main footer #about_block{
+    padding-left: 20px;
+}
+
+main footer #design_block{
+    padding: 20px 14px 0 0;
+}
+
+main footer #design_block h3{
+    clear: both;
+    color: #c4c4c4;
+    float: right;
+    font-family: 'CuprumRegular';
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+/*=======================================================================*/
+/*----------------------VIEW STYLES------------------------*/
+/*=======================================================================*/
+
+
+main #content section .detail_view{
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+}
+
+main #content section .detail_view h4{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 34px;
+    font-weight: normal;
+    padding: 5px 0 15px 10px;
+}
+
+main #content section .detail_view img{
+    display: block;
+    float: left;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+main #content section .detail_view .right_block{
+    width: 100%;
+    clear: both;
+}
+
+main #content section .detail_view .right_block h3{
+    color: #889564;
+    text-align: right;
+    font-family: 'CalibriRegular';
+    font-size: 28px;
+    font-weight: normal;
+    padding: 20px 20px 10px 0;
+}
+
+main #content section .detail_view .right_block a{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    float: right;
+    display: block;
+    font-size: 13px;
+    padding: 4px 18px;
+}
+
+main #content section .detail_view .right_block .added{
+    background: #8aa934;
+    color: #ffffff;
+}
+
+main #content section .detail_view .table{
+    margin-top: 20px;
+}
+
+/*=======================================================================*/
+/*----------------------LOGIN CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content section .login_form{
+    margin: 10px auto 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+}
+
+main #content section .login_form label{
+    color: #889564;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+    width: 60px;
+}
+
+main #content section .login_form input{
+    background: linear-gradient(to top, #ffffff, #f9f9f9);
+    border: 1px solid #e7e7e7;
+    border-radius: 17px;
+    font-size: 13px;
+    outline: none;
+    padding: 2px 5px;
+}
+
+main #content section .login_form .rememberMe label{
+    width: auto;
+}
+
+main #content section .login_form .buttons input{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    color: #6f6f6f;
+    padding: 4px 18px;
+}
+
+/*=======================================================================*/
+/*----------------------ADMIN CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content section .admin_panel{
+    width: 100%;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+}
+
+main #content section .admin_panel h2{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 34px;
+    font-weight: normal;
+    padding: 5px 0 15px 10px;
+}
+
+main #content section .admin_panel form .errorSummary p{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 22px;
+    font-weight: normal;
+}
+
+main #content section .admin_panel form .errorSummary ul{
+    list-style: none;
+    padding: 0 0 40px 20px;
+}
+
+main #content section .admin_panel form .errorSummary ul li{
+    color: #889564;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+}
+
+main #content section .admin_panel form .row{
+    padding: 3px 0;
+}
+
+main #content section .admin_panel form label{
+    color: #889564;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+    width: 180px;
+}
+
+main #content section .admin_panel form input{
+    background: linear-gradient(to top, #ffffff, #f9f9f9);
+    border: 1px solid #e7e7e7;
+    border-radius: 17px;
+    font-size: 13px;
+    outline: none;
+    padding: 2px 5px;
+    display: inline;
+}
+
+main #content section .admin_panel form .buttons input{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    color: #6f6f6f;
+    padding: 4px 18px;
+    margin-bottom: 10px;
+}
+
+main #content section .admin_panel a{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    color: #6f6f6f;
+    padding: 4px 18px;
+    border-radius: 17px;
+    font-size: 13px;
+}
+
+/*=======================================================================*/
+/*----------------------BASKET CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content section #basket_products_block{
+    padding: 10px;
+}
+
+main #content section #basket_products_block .basket_product{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+main #content section #basket_products_block .basket_product img{
+    height: auto;
+    float: left;
+    margin-right: 10px;
+    max-width: 200px;
+    width: 50%;
+}
+
+main #content section #basket_products_block .basket_product h4{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    font-weight: normal;
+}
+
+main #content section #basket_products_block .basket_product p{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+    min-height: 76px;
+    padding: 5px 0;
+}
+
+main #content section #basket_products_block .basket_product h3{
+    color: #889564;
+    float: right;
+    font-family: 'CalibriRegular';
+    font-size: 20px;
+    font-weight: normal;
+    margin: 3px 5px 0 0;
+}
+
+main #content section #basket_products_block .basket_product .remove_from_basket{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    float: right;
+    display: block;
+    font-size: 13px;
+    padding: 4px 18px;
+}
+
+main #content section #basket_products_block #summary{
+    color: #666666;
+    float: right;
+    font-family: 'CalibriRegular';
+    font-size: 20px;
+}
+
+main #content section #send_order_block{
+    padding: 10px;
+}
+
+main #content section #send_order_block input[type='submit'], main #content section #send_order_block button{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    font-size: 13px;
+    padding: 4px 18px;
+}
+
+main #content section #send_order_block button:focus{
+    outline: none;
+}
+
+main #content section #send_order_block #show_form_button{
+    clear: both;
+    /*display: none;*/
+    float: right;
+    margin-top: 5px;
+}
+
+main #content section #send_order_block #order_form_block{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    clear: both;
+    /*display: none;*/
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+main #content section #send_order_block #order_form_block h4 {
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+main #content section #send_order_block #order_form_block label{
+    color: #666666;
+    display: block;
+    float: left;
+    font-family: 'CalibriRegular';
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+main #content section #send_order_block #order_form_block p{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 20px;
+    clear: both;
+    margin: 0;
+}
+
+main #content section #send_order_block #order_form_block input{
+    display: block;
+    float: left;
+    clear: both;
+    margin-right: 5px;
+}
+
+main #content section #send_order_block #order_form_block #pay_type_block, main #content section #send_order_block #order_form_block #delivery_type_block{
+    margin-bottom: 10px;
+}
+
+main #content section #send_order_block #order_form_block #contacts_block input{
+    background: linear-gradient(to top, #ffffff, #f9f9f9);
+    border: 1px solid #e7e7e7;
+    border-radius: 17px;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    max-width: 350px;
+    padding: 5px 0 5px 14px;
+    width: 100%;
+}
+
+main #content section #send_order_block #order_form_block #contacts_block input:focus{
+    outline: none;
+}
+
+/*=======================================================================*/
+/*----------------------ORDER CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content section .order_list_block{
+    padding: 10px;
+}
+
+main #content section .order_list_block .order_block{
+    background: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+main #content section .order_list_block .order_block .half_block{
+    float: left;
+    width: 50%;
+}
+
+main #content section .order_list_block .order_block h4{
+    color: #5f702e;
+    font-family: 'CalibriRegular';
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+main #content section .order_list_block .order_block ul{
+    list-style: none;
+    padding: 0 0 10px 15px;
+}
+
+main #content section .order_list_block .order_block ul li{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 13px;
+}
+
+main #content section .order_list_block .order_block a{
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border: 3px solid #8aa934;
+    border-radius: 17px;
+    color: #6f6f6f;
+    font-size: 13px;
+    padding: 4px 18px;
+}
+
+/*=======================================================================*/
+/*----------------------DELIVERY CONTENT STYLES------------------------*/
+/*=======================================================================*/
+
+main #content section{
+    padding: 10px;
+}
+
+main #content section h1{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 30px;
+    margin: 0 0 20px 20px;
+}
+
+main #content section p{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 15px;
+    margin: 0 0 20px 20px;
+}
+
+main #content section .table{
+    color: #666666;
+    font-family: 'CalibriRegular';
+    font-size: 14px;
+}
+
+main #content section .table th, main #content section .table .half{
+    width: 50%;
+}
+
+main #content section .table th, main #content section .table .third{
+    width: 33.3%;
+}
+
+main #content section .table span{
+    font-size: 11px;
+}
+
+main #content section #google_map{
+    width: 100%;
+    height: 500px;
+}
+
+/*=======================================================================*/
+/*----------------------MEDIA STYLES------------------------*/
+/*=======================================================================*/
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    main #content section #catalog_block .catalog_item_block .catalog_item p{
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    main #content section #catalog_block .catalog_item_block .catalog_item p{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    main #content section #catalog_block .catalog_item_block .catalog_item img{
+        float: left;
+        height: auto;
+        margin: 10px 10px 5px 10px;
+        width: 45%;
+    }
+    main #content section #catalog_block .catalog_item_block .catalog_item h4{
+        margin-top: 10px;
+    }
+    main #content section #catalog_block .catalog_item_block .catalog_item p{
+        height: auto;
+    }
+    main #content section #catalog_block .catalog_item_block .catalog_item h3{
+        clear: both;
+    }
+}

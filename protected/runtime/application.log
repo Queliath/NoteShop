@@ -1,0 +1,1770 @@
+2016/02/09 19:30:29 [error] [exception.CException] exception 'CException' with message 'CPasswordHelper requires the Blowfish option of the PHP crypt() function. This system does not have it.' in Z:\home\yii.com\www\framework\utils\CPasswordHelper.php:68
+Stack trace:
+#0 Z:\home\yii.com\www\framework\utils\CPasswordHelper.php(114): CPasswordHelper::checkBlowfish()
+#1 Z:\home\testyii.com\www\protected\models\User.php(92): CPasswordHelper::verifyPassword('demo', '$2a$10$JTJf6/Xq...')
+#2 Z:\home\testyii.com\www\protected\components\UserIdentity.php(25): User->validatePassword('demo')
+#3 Z:\home\testyii.com\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 Z:\home\yii.com\www\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 Z:\home\yii.com\www\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 Z:\home\yii.com\www\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 Z:\home\testyii.com\www\protected\controllers\SiteController.php(94): CModel->validate()
+#8 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\yii.com\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('login')
+#13 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://testyii.com/index.php?r=site/login
+---
+2016/02/10 18:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Запрашиваемая страница не существует.' in Z:\home\testyii.com\www\protected\controllers\PostController.php:163
+Stack trace:
+#0 Z:\home\testyii.com\www\protected\controllers\PostController.php(50): PostController->loadModel('5')
+#1 [internal function]: PostController->actionView('5')
+#2 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#13 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#14 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/view&id=5
+---
+2016/02/16 16:50:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.product' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `product`.
+in Z:\home\testyii.com\www\protected\controllers\ProductController.php (155)
+in Z:\home\testyii.com\www\protected\controllers\ProductController.php (55)
+in Z:\home\testyii.com\www\index.php (13)
+2016/02/16 16:50:29 [error] [exception.CDbException] exception 'CDbException' with message 'The table "product" for active record class "Product" cannot be found in the database.' in Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php:2387
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Product))
+#1 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(1490): CActiveRecord->getTableSchema()
+#3 Z:\home\testyii.com\www\protected\controllers\ProductController.php(155): CActiveRecord->findByPk('1')
+#4 Z:\home\testyii.com\www\protected\controllers\ProductController.php(55): ProductController->loadModel('1')
+#5 [internal function]: ProductController->actionView('1')
+#6 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/view')
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=product/view&id=1
+---
+2016/02/16 16:50:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.product' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `product`.
+in Z:\home\testyii.com\www\protected\views\product\index.php (20)
+in Z:\home\testyii.com\www\protected\controllers\ProductController.php (128)
+in Z:\home\testyii.com\www\index.php (13)
+2016/02/16 16:50:45 [error] [exception.CDbException] exception 'CDbException' with message 'The table "product" for active record class "Product" cannot be found in the database.' in Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php:2387
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Product))
+#1 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 Z:\home\yii.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 Z:\home\yii.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 Z:\home\yii.com\www\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 Z:\home\yii.com\www\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 Z:\home\yii.com\www\framework\web\CBaseController.php(147): CListView->init()
+#10 Z:\home\yii.com\www\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 Z:\home\testyii.com\www\protected\views\product\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\testyii...')
+#13 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\testyii...', Array, true)
+#14 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\testyii...', Array, true)
+#15 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 Z:\home\testyii.com\www\protected\controllers\ProductController.php(128): CController->render('index', Array)
+#17 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#18 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#25 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#27 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product')
+#28 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#29 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/index.php?r=product
+---
+2016/02/16 16:51:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.product' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `product`.
+in Z:\home\testyii.com\www\protected\views\product\index.php (20)
+in Z:\home\testyii.com\www\protected\controllers\ProductController.php (128)
+in Z:\home\testyii.com\www\index.php (13)
+2016/02/16 16:51:37 [error] [exception.CDbException] exception 'CDbException' with message 'The table "product" for active record class "Product" cannot be found in the database.' in Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php:2387
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Product))
+#1 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#3 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 Z:\home\yii.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 Z:\home\yii.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 Z:\home\yii.com\www\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 Z:\home\yii.com\www\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 Z:\home\yii.com\www\framework\web\CBaseController.php(147): CListView->init()
+#10 Z:\home\yii.com\www\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 Z:\home\testyii.com\www\protected\views\product\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\testyii...')
+#13 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\testyii...', Array, true)
+#14 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\testyii...', Array, true)
+#15 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 Z:\home\testyii.com\www\protected\controllers\ProductController.php(128): CController->render('index', Array)
+#17 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#18 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#25 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#27 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product')
+#28 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#29 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/index.php?r=product
+---
+2016/02/26 19:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexhtml".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('indexhtml')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('indexhtml')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/indexhtml')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/indexhtml
+HTTP_REFERER=http://testyii.com/site/testhtml
+---
+2016/02/26 19:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "testhtml".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('testhtml')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('testhtml')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testhtml')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/testhtml
+HTTP_REFERER=http://testyii.com/site/loginhtml
+---
+2016/02/26 19:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginhtml".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('loginhtml')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('loginhtml')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginhtml')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/loginhtml
+HTTP_REFERER=http://testyii.com/site/testhtml
+---
+2016/02/26 19:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test.html".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('test.html')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('test.html')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/test.html')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/test.html
+HTTP_REFERER=http://testyii.com/site/index.html
+---
+2016/02/27 19:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://testyii.com/
+---
+2016/02/27 21:29:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/login
+---
+2016/02/27 21:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('test')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test
+---
+2016/03/01 12:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://testyii.com/
+---
+2016/03/01 23:50:05 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Post.comments".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('comments')
+#1 Z:\home\testyii.com\www\protected\views\post\view.php(35): CActiveRecord->__get('comments')
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\testyii...')
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\testyii...', Array, true)
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\testyii...', Array, true)
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 Z:\home\testyii.com\www\protected\controllers\PostController.php(51): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('9')
+#8 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#19 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/post/9
+HTTP_REFERER=http://testyii.com/post/index
+---
+2016/03/01 23:52:57 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Post.comments".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('comments')
+#1 Z:\home\testyii.com\www\protected\views\post\view.php(35): CActiveRecord->__get('comments')
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\testyii...')
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\testyii...', Array, true)
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\testyii...', Array, true)
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 Z:\home\testyii.com\www\protected\controllers\PostController.php(51): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('9')
+#8 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#19 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/post/9
+HTTP_REFERER=http://testyii.com/post/index
+---
+2016/03/01 23:56:42 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Post.comments".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('comments')
+#1 Z:\home\testyii.com\www\protected\views\post\view.php(35): CActiveRecord->__get('comments')
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\testyii...')
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\testyii...', Array, true)
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\testyii...', Array, true)
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 Z:\home\testyii.com\www\protected\controllers\PostController.php(52): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('9')
+#8 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#19 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/post/9
+HTTP_REFERER=http://testyii.com/post/index
+---
+2016/03/01 23:57:46 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Post.comments".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('comments')
+#1 Z:\home\testyii.com\www\protected\controllers\PostController.php(50): CActiveRecord->__get('comments')
+#2 [internal function]: PostController->actionView('9')
+#3 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#14 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#15 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/post/9
+HTTP_REFERER=http://testyii.com/post/index
+---
+2016/03/01 23:58:29 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comments.status' in 'where clause'. Выполнявшийся SQL-запрос: SELECT `сomments`.`id` AS `t1_c0`, `сomments`.`content` AS `t1_c1`, `сomments`.`status` AS `t1_c2`, `сomments`.`create_time` AS `t1_c3`, `сomments`.`author` AS `t1_c4`, `сomments`.`email` AS `t1_c5`, `сomments`.`url` AS `t1_c6`, `сomments`.`post_id` AS `t1_c7` FROM `tbl_comment` `сomments`  WHERE (comments.status=2) AND (`сomments`.`post_id`=:ypl0) ORDER BY comments.create_time DESC.
+in Z:\home\testyii.com\www\protected\controllers\PostController.php (50)
+in Z:\home\testyii.com\www\index.php (13)
+2016/03/01 23:58:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comments.status' in 'where clause'. The SQL statement executed was: SELECT `сomments`.`id` AS `t1_c0`, `сomments`.`content` AS `t1_c1`, `сomments`.`status` AS `t1_c2`, `сomments`.`create_time` AS `t1_c3`, `сomments`.`author` AS `t1_c4`, `сomments`.`email` AS `t1_c5`, `сomments`.`url` AS `t1_c6`, `сomments`.`post_id` AS `t1_c7` FROM `tbl_comment` `сomments`  WHERE (comments.status=2) AND (`сomments`.`post_id`=:ypl0) ORDER BY comments.create_time DESC' in Z:\home\yii.com\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 Z:\home\yii.com\www\framework\db\ar\CActiveFinder.php(808): CDbCommand->queryAll()
+#2 Z:\home\yii.com\www\framework\db\ar\CActiveFinder.php(509): CJoinElement->runQuery(Object(CJoinQuery))
+#3 Z:\home\yii.com\www\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Post))
+#4 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(281): CActiveFinder->lazyFind(Object(Post))
+#5 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(143): CActiveRecord->getRelated('??omments')
+#6 Z:\home\testyii.com\www\protected\controllers\PostController.php(50): CActiveRecord->__get('??omments')
+#7 [internal function]: PostController->actionView('9')
+#8 Z:\home\yii.com\www\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#19 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/post/9
+HTTP_REFERER=http://testyii.com/post/index
+---
+2016/03/02 15:52:29 [error] [php] Missing argument 2 for YiiBase::t(), called in Z:\home\testyii.com\www\protected\views\post\_view.php on line 26 and defined (Z:\home\yii.com\www\framework\YiiBase.php:582)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 Z:\home\yii.com\www\framework\zii\widgets\CListView.php(291): PostController->renderFile()
+#2 Z:\home\yii.com\www\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#3 unknown(0): CListView->renderSection()
+#4 Z:\home\yii.com\www\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#5 Z:\home\yii.com\www\framework\zii\widgets\CBaseListView.php(149): CListView->renderContent()
+#6 Z:\home\yii.com\www\framework\web\CBaseController.php(181): CListView->run()
+#7 Z:\home\testyii.com\www\protected\views\post\index.php(24): PostController->widget()
+#8 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require()
+#9 Z:\home\yii.com\www\framework\web\CBaseController.php(95): PostController->renderInternal()
+#10 Z:\home\yii.com\www\framework\web\CController.php(869): PostController->renderFile()
+#11 Z:\home\yii.com\www\framework\web\CController.php(782): PostController->renderPartial()
+#12 Z:\home\testyii.com\www\protected\controllers\PostController.php(160): PostController->render()
+#13 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#14 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#16 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#19 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\yii.com\www\framework\web\CController.php(265): PostController->runActionWithFilters()
+#22 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): PostController->run()
+#23 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 Z:\home\testyii.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/post/index
+in Z:\home\testyii.com\www\protected\views\post\_view.php (26)
+in Z:\home\testyii.com\www\protected\views\post\index.php (24)
+in Z:\home\testyii.com\www\protected\controllers\PostController.php (160)
+2016/03/02 18:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/view')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/comment/2
+HTTP_REFERER=http://testyii.com/comment/update/2
+---
+2016/03/02 20:05:27 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in Z:\home\yii.com\www\framework\db\CDbConnection.php:405
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 Z:\home\yii.com\www\framework\caching\CDbCache.php(78): CDbConnection->setActive(true)
+#2 Z:\home\yii.com\www\framework\base\CModule.php(394): CDbCache->init()
+#3 Z:\home\yii.com\www\framework\web\CUrlManager.php(216): CModule->getComponent('cache')
+#4 Z:\home\yii.com\www\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#5 Z:\home\yii.com\www\framework\base\CModule.php(394): CUrlManager->init()
+#6 Z:\home\yii.com\www\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#7 Z:\home\yii.com\www\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#8 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/post/index
+HTTP_REFERER=http://testyii.com/site/login
+---
+2016/03/02 20:05:27 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:45 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in Z:\home\yii.com\www\framework\db\CDbConnection.php:405
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 Z:\home\yii.com\www\framework\caching\CDbCache.php(78): CDbConnection->setActive(true)
+#2 Z:\home\yii.com\www\framework\base\CModule.php(394): CDbCache->init()
+#3 Z:\home\yii.com\www\framework\web\CUrlManager.php(216): CModule->getComponent('cache')
+#4 Z:\home\yii.com\www\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#5 Z:\home\yii.com\www\framework\base\CModule.php(394): CUrlManager->init()
+#6 Z:\home\yii.com\www\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#7 Z:\home\yii.com\www\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#8 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/post/index
+HTTP_REFERER=http://testyii.com/site/login
+---
+2016/03/02 20:05:45 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:46 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in Z:\home\yii.com\www\framework\db\CDbConnection.php:405
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 Z:\home\yii.com\www\framework\caching\CDbCache.php(78): CDbConnection->setActive(true)
+#2 Z:\home\yii.com\www\framework\base\CModule.php(394): CDbCache->init()
+#3 Z:\home\yii.com\www\framework\web\CUrlManager.php(216): CModule->getComponent('cache')
+#4 Z:\home\yii.com\www\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#5 Z:\home\yii.com\www\framework\base\CModule.php(394): CUrlManager->init()
+#6 Z:\home\yii.com\www\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#7 Z:\home\yii.com\www\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#8 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/post/index
+HTTP_REFERER=http://testyii.com/site/login
+---
+2016/03/02 20:05:46 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:47 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in Z:\home\yii.com\www\framework\db\CDbConnection.php:405
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 Z:\home\yii.com\www\framework\caching\CDbCache.php(78): CDbConnection->setActive(true)
+#2 Z:\home\yii.com\www\framework\base\CModule.php(394): CDbCache->init()
+#3 Z:\home\yii.com\www\framework\web\CUrlManager.php(216): CModule->getComponent('cache')
+#4 Z:\home\yii.com\www\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#5 Z:\home\yii.com\www\framework\base\CModule.php(394): CUrlManager->init()
+#6 Z:\home\yii.com\www\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#7 Z:\home\yii.com\www\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#8 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/post/index
+HTTP_REFERER=http://testyii.com/site/login
+---
+2016/03/02 20:05:47 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:48 [error] [exception.CDbException] could not find driver
+2016/03/02 20:05:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in Z:\home\yii.com\www\framework\db\CDbConnection.php:405
+Stack trace:
+#0 Z:\home\yii.com\www\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 Z:\home\yii.com\www\framework\caching\CDbCache.php(78): CDbConnection->setActive(true)
+#2 Z:\home\yii.com\www\framework\base\CModule.php(394): CDbCache->init()
+#3 Z:\home\yii.com\www\framework\web\CUrlManager.php(216): CModule->getComponent('cache')
+#4 Z:\home\yii.com\www\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#5 Z:\home\yii.com\www\framework\base\CModule.php(394): CUrlManager->init()
+#6 Z:\home\yii.com\www\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#7 Z:\home\yii.com\www\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#8 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\home\testyii.com\www\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/post/index
+HTTP_REFERER=http://testyii.com/site/login
+---
+2016/03/02 20:05:48 [error] [exception.CDbException] could not find driver
+2016/03/03 14:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/03 14:34:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "product".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2016/03/03 16:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/menu_icon.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/menu_icon.p...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/03 16:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/basket.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/basket.png')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/03 16:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:14:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:14:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:14:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/index
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/product/index
+---
+2016/03/03 16:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/product/index
+---
+2016/03/03 16:14:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/product/index
+HTTP_REFERER=http://noteshopyii.by/product/product/index
+---
+2016/03/03 16:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/product/product/index
+---
+2016/03/03 16:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "product".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('product')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('product')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/product...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/product/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/product/product/index
+---
+2016/03/03 16:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/menu_icon.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/menu_icon.p...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/03 16:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/basket.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/basket.png')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/03 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/bas...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/men...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:21:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:32:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:32:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/headerBackground.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/headerBackg...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/headerBackground.jpg
+HTTP_REFERER=http://noteshopyii.by/css/styles.css
+---
+2016/03/03 16:32:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/menu_icon.png
+---
+2016/03/03 16:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/images/basket.png
+HTTP_REFERER=http://noteshopyii.by/product/images/menu_icon.png
+---
+2016/03/03 16:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "images".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('images')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('images')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/images/...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/images/images/menu_icon.png
+HTTP_REFERER=http://noteshopyii.by/product/images/menu_icon.png
+---
+2016/03/03 16:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/img/cat...')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/img/category.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 16:43:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/category.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/category.jp...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/category.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/hp_probook.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/hp_probook....')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/hp_probook.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/acer_aspire...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/notebook.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/notebook.jp...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/notebook.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/hp_pavilion.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/hp_pavilion...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/hp_pavilion.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/asus_x5.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/asus_x5.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/asus_x5.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/03 18:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/lenovo.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/lenovo.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/lenovo.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/04 00:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/site/login
+---
+2016/03/04 00:40:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/04 00:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/04 00:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/04 00:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/04 01:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "basket".' in Z:\home\yii.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(270): CController->missingAction('basket')
+#1 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('basket')
+#2 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/basket')
+#3 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/product/basket
+HTTP_REFERER=http://noteshopyii.by/site/guarantee
+---
+2016/03/04 17:00:24 [error] [exception.CException] exception 'CException' with message 'В классе CActiveForm и его поведениях не найден метод или замыкание с именем "labexEx".' in Z:\home\yii.com\www\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('labexEx', Array)
+#1 Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php(145): CActiveForm->labexEx(Object(FilterForm), 'min_price')
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\notesho...')
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\notesho...', Array, true)
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\notesho...', Array, true)
+#5 Z:\home\noteshopyii.by\www\protected\views\product\index.php(10): CController->renderPartial('filter_form', Array)
+#6 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\notesho...')
+#7 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\notesho...', Array, true)
+#8 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\notesho...', Array, true)
+#9 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(148): CController->render('index', Array)
+#11 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#12 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#19 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#21 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#22 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/product/index
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/05 00:37:42 [error] [php] Invalid argument supplied for foreach() (Z:\home\yii.com\www\framework\db\schema\CDbCriteria.php:159)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(96): CActiveDataProvider->__set()
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(149): CActiveDataProvider->__construct()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (149)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/05 13:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://noteshopyii.by/
+---
+2016/03/05 19:41:24 [error] [php] include(IECartPosition.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\yii.com\www\framework\YiiBase.php:432)
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\Product.php(23): spl_autoload_call()
+#1 Z:\home\yii.com\www\framework\YiiBase.php(432): include()
+#2 unknown(0): autoload()
+#3 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#4 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(165): model()
+#5 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(143): CActiveDataProvider->__construct()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\models\Product.php (23)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (143)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/05 19:44:15 [error] [php] include(IECartPosition.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\yii.com\www\framework\YiiBase.php:432)
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\Product.php(23): spl_autoload_call()
+#1 Z:\home\yii.com\www\framework\YiiBase.php(432): include()
+#2 unknown(0): autoload()
+#3 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#4 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(165): model()
+#5 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(143): CActiveDataProvider->__construct()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\models\Product.php (23)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (143)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/05 19:44:17 [error] [php] include(IECartPosition.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\yii.com\www\framework\YiiBase.php:432)
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\Product.php(23): spl_autoload_call()
+#1 Z:\home\yii.com\www\framework\YiiBase.php(432): include()
+#2 unknown(0): autoload()
+#3 Z:\home\yii.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#4 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(165): model()
+#5 Z:\home\yii.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(143): CActiveDataProvider->__construct()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\models\Product.php (23)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (143)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/07 14:06:58 [error] [php] Missing argument 1 for CClientScript::registerScript(), called in Z:\home\noteshopyii.by\www\protected\views\product\index.php on line 7 and defined (Z:\home\yii.com\www\framework\web\CClientScript.php:682)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CBaseController.php(95): ProductController->renderInternal()
+#1 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#2 Z:\home\yii.com\www\framework\web\CController.php(782): ProductController->renderPartial()
+#3 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(148): ProductController->render()
+#4 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#5 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#7 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#13 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#14 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\views\product\index.php (7)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (148)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/07 19:18:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\yii.com\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('basket/delete/i...')
+#10 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/basket/delete/index
+HTTP_REFERER=http://noteshopyii.by/basket/index
+---
+2016/03/07 19:49:12 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ProductController.clientScript".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\views\product\index.php(26): CComponent->__get('clientScript')
+#1 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require('Z:\home\notesho...')
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\notesho...', Array, true)
+#3 Z:\home\yii.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\notesho...', Array, true)
+#4 Z:\home\yii.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(148): CController->render('index', Array)
+#6 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#7 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#17 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/product/index
+HTTP_REFERER=http://noteshopyii.by/basket/index
+---
+2016/03/10 18:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/hp_pavilion".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hp_pavil...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/hp_pavilion
+HTTP_REFERER=http://noteshopyii.by/product/20
+---
+2016/03/11 14:59:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/21
+---
+2016/03/11 15:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 15:35:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 15:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/21
+---
+2016/03/11 15:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2016/03/11 15:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 15:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bvcxcbb".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('bvcxcbb')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bvcxcbb
+HTTP_REFERER=http://noteshopyii.by/product/22
+---
+2016/03/11 16:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "acer_aspire.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('acer_aspire.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/acer_aspire.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 16:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bvcxcbb".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('bvcxcbb')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bvcxcbb
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 16:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bvcxcbb".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('bvcxcbb')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bvcxcbb
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/11 16:22:07 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:22:07 [warning] [application] Не удалось присвоить небезопасный атрибут "screen" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:22:07 [warning] [application] Не удалось присвоить небезопасный атрибут "cpu" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:22:07 [warning] [application] Не удалось присвоить небезопасный атрибут "ram" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:22:07 [warning] [application] Не удалось присвоить небезопасный атрибут "os" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:22:07 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "FilterForm.".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\FilterForm.php(25): CComponent->__get('')
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(127): FilterForm->getCDbCriteria()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=15.6&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=6&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=windows-8&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/11 16:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "screen" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "cpu" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "ram" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:25:19 [warning] [application] Не удалось присвоить небезопасный атрибут "os" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:29:44 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:29:44 [warning] [application] Не удалось присвоить небезопасный атрибут "screen" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:29:44 [warning] [application] Не удалось присвоить небезопасный атрибут "cpu" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:29:44 [warning] [application] Не удалось присвоить небезопасный атрибут "ram" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:29:44 [warning] [application] Не удалось присвоить небезопасный атрибут "os" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:08 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:08 [warning] [application] Не удалось присвоить небезопасный атрибут "screen" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:08 [warning] [application] Не удалось присвоить небезопасный атрибут "cpu" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:08 [warning] [application] Не удалось присвоить небезопасный атрибут "ram" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:08 [warning] [application] Не удалось присвоить небезопасный атрибут "os" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:53 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:53 [warning] [application] Не удалось присвоить небезопасный атрибут "screen" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:53 [warning] [application] Не удалось присвоить небезопасный атрибут "cpu" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:53 [warning] [application] Не удалось присвоить небезопасный атрибут "ram" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:39:53 [warning] [application] Не удалось присвоить небезопасный атрибут "os" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 16:44:46 [error] [php] Invalid argument supplied for foreach() (Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php:24)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#1 Z:\home\noteshopyii.by\www\protected\views\product\index.php(31): ProductController->renderPartial()
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): ProductController->renderInternal()
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): ProductController->renderPartial()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(142): ProductController->render()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php (24)
+in Z:\home\noteshopyii.by\www\protected\views\product\index.php (31)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (142)
+2016/03/11 16:45:02 [error] [php] Invalid argument supplied for foreach() (Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php:24)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#1 Z:\home\noteshopyii.by\www\protected\views\product\index.php(31): ProductController->renderPartial()
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): ProductController->renderInternal()
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): ProductController->renderPartial()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(142): ProductController->render()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php (24)
+in Z:\home\noteshopyii.by\www\protected\views\product\index.php (31)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (142)
+2016/03/11 16:45:31 [error] [php] Invalid argument supplied for foreach() (Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php:26)
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#1 Z:\home\noteshopyii.by\www\protected\views\product\index.php(31): ProductController->renderPartial()
+#2 Z:\home\yii.com\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\yii.com\www\framework\web\CBaseController.php(95): ProductController->renderInternal()
+#4 Z:\home\yii.com\www\framework\web\CController.php(869): ProductController->renderFile()
+#5 Z:\home\yii.com\www\framework\web\CController.php(782): ProductController->renderPartial()
+#6 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(142): ProductController->render()
+#7 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#8 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): ProductController->runAction()
+#10 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\yii.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): ProductController->filterAccessControl()
+#13 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\yii.com\www\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#16 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): ProductController->run()
+#17 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 Z:\home\noteshopyii.by\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/product/index
+in Z:\home\noteshopyii.by\www\protected\views\product\filter_form.php (26)
+in Z:\home\noteshopyii.by\www\protected\views\product\index.php (31)
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (142)
+2016/03/11 22:35:06 [warning] [application] Не удалось присвоить небезопасный атрибут "brand" класса "FilterForm".
+in Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php (124)
+in Z:\home\noteshopyii.by\www\index.php (13)
+2016/03/11 22:49:55 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "FilterForm.".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\FilterForm.php(26): CComponent->__get('')
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(127): FilterForm->getCDbCriteria()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C&FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=Acer&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bbrand%5D%5B%5D=Lenovo&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bscreen%5D%5B%5D=15.6&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i3&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bcpu%5D%5B%5D=intel-i7&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bram%5D%5B%5D=6&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=windows-8&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C&FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=Acer&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bbrand%5D%5B%5D=Lenovo&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bscreen%5D%5B%5D=15.6&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i3&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bcpu%5D%5B%5D=intel-i7&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bram%5D%5B%5D=6&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=windows-8&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+HTTP_REFERER=http://noteshopyii.by/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C&FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=Acer&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bbrand%5D%5B%5D=Lenovo&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bscreen%5D%5B%5D=15.6&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i3&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bcpu%5D%5B%5D=intel-i7&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bram%5D%5B%5D=6&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=windows-8&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+---
+2016/03/11 22:50:31 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "FilterForm.".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\FilterForm.php(26): CComponent->__get('')
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(127): FilterForm->getCDbCriteria()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C&FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=Acer&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bbrand%5D%5B%5D=Lenovo&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bscreen%5D%5B%5D=15.6&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i3&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bcpu%5D%5B%5D=intel-i7&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bram%5D%5B%5D=6&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=windows-8&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+HTTP_REFERER=http://noteshopyii.by/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+---
+2016/03/11 22:50:32 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "FilterForm.".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\FilterForm.php(26): CComponent->__get('')
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(127): FilterForm->getCDbCriteria()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=HP&FilterForm%5Bscreen%5D=&FilterForm%5Bscreen%5D%5B%5D=13.3&FilterForm%5Bcpu%5D=&FilterForm%5Bcpu%5D%5B%5D=intel-i5&FilterForm%5Bram%5D=&FilterForm%5Bram%5D%5B%5D=4&FilterForm%5Bos%5D=&FilterForm%5Bos%5D%5B%5D=linux&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/11 22:55:28 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "FilterForm.".' in Z:\home\yii.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\noteshopyii.by\www\protected\models\FilterForm.php(26): CComponent->__get('')
+#1 Z:\home\noteshopyii.by\www\protected\controllers\ProductController.php(127): FilterForm->getCDbCriteria()
+#2 Z:\home\yii.com\www\framework\web\actions\CInlineAction.php(49): ProductController->actionIndex()
+#3 Z:\home\yii.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\yii.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\yii.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\yii.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\yii.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\yii.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\yii.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\yii.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('product/index')
+#13 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/product/index?FilterForm%5Bbrand%5D=&FilterForm%5Bbrand%5D%5B%5D=Apple&FilterForm%5Bbrand%5D%5B%5D=Asus&FilterForm%5Bbrand%5D%5B%5D=Dell&FilterForm%5Bscreen%5D=&FilterForm%5Bcpu%5D=&FilterForm%5Bram%5D=&FilterForm%5Bos%5D=&FilterForm%5Bmin_price%5D=&FilterForm%5Bmax_price%5D=&yt0=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C
+HTTP_REFERER=http://noteshopyii.by/product/index
+---
+2016/03/28 15:39:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/1392531469257.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('images/13925314...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/1392531469257.png
+HTTP_REFERER=http://noteshopyii.by/product/20
+---
+2016/03/28 15:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/1392531469257.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('images/13925314...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/1392531469257.png
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:41:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/1392531469257.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('images/13925314...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/1392531469257.png
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/21
+---
+2016/03/28 15:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/1392531469257.png".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('images/13925314...')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/1392531469257.png
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/22
+---
+2016/03/28 15:59:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
+2016/03/28 15:59:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "AVyRneRxTFM.jpg".' in Z:\home\yii.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yii.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('AVyRneRxTFM.jpg')
+#1 Z:\home\yii.com\www\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 Z:\home\noteshopyii.by\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/AVyRneRxTFM.jpg
+HTTP_REFERER=http://noteshopyii.by/product/index?page=3
+---
