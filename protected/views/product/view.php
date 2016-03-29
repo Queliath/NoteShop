@@ -4,27 +4,6 @@
 $attributes = $model->attributeLabels();
 
 $this->pageTitle = $model->brand.' '.$model->model;
-
-$addToBasketScript = '
-    $(".add_to_basket").click(function(){
-        var self = this;
-        if($(self).hasClass("added")){
-            alert("Товар уже находится в корзине!");
-        }
-        else{
-            $.get(self.getAttribute("data-href"), {}, function(data){
-                //Обновление кнопки
-                $(self).addClass("added");
-                self.innerHTML = "Товар добавлен";
-
-                document.querySelector("#basket_button_block h4 span").innerHTML = data;
-            });
-        }
-        return false;
-    });
-';
-
-Yii::app()->clientScript->registerScript('addToBasket',$addToBasketScript);
 ?>
 
 <div class="detail_view">
@@ -89,3 +68,6 @@ Yii::app()->clientScript->registerScript('addToBasket',$addToBasketScript);
     </table>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/addToBasket.js"></script>
